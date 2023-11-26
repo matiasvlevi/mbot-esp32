@@ -1,0 +1,132 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /home/vlev/Documents/Github/esp32-mbot/esp32/build/bootloader/esp-idf/esptool_py && /home/vlev/.espressif/python_env/idf5.3_py3.11_env/bin/python /home/vlev/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/vlev/Documents/Github/esp32-mbot/esp32/build/bootloader/bootloader.bin
+Bootloader binary size 0x6810 bytes. 0x7f0 bytes (7%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/wifi.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/wifi.c.obj 
+/home/vlev/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.3-dev-277-gc8243465e4\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/vlev/Documents/Github/esp32-mbot/esp32/build/config -I/home/vlev/Documents/Github/esp32-mbot/esp32/main -I/home/vlev/esp/esp-idf/components/newlib/platform_include -I/home/vlev/esp/esp-idf/components/freertos/config/include -I/home/vlev/esp/esp-idf/components/freertos/config/include/freertos -I/home/vlev/esp/esp-idf/components/freertos/config/xtensa/include -I/home/vlev/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/vlev/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/vlev/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/home/vlev/esp/esp-idf/components/freertos/esp_additions/include -I/home/vlev/esp/esp-idf/components/esp_hw_support/include -I/home/vlev/esp/esp-idf/components/esp_hw_support/include/soc -I/home/vlev/esp/esp-idf/components/esp_hw_support/include/soc/esp32 -I/home/vlev/esp/esp-idf/components/esp_hw_support/port/esp32/. -I/home/vlev/esp/esp-idf/components/esp_hw_support/port/esp32/private_include -I/home/vlev/esp/esp-idf/components/heap/include -I/home/vlev/esp/esp-idf/components/log/include -I/home/vlev/esp/esp-idf/components/soc/include -I/home/vlev/esp/esp-idf/components/soc/esp32 -I/home/vlev/esp/esp-idf/components/soc/esp32/include -I/home/vlev/esp/esp-idf/components/hal/platform_port/include -I/home/vlev/esp/esp-idf/components/hal/esp32/include -I/home/vlev/esp/esp-idf/components/hal/include -I/home/vlev/esp/esp-idf/components/esp_rom/include -I/home/vlev/esp/esp-idf/components/esp_rom/include/esp32 -I/home/vlev/esp/esp-idf/components/esp_rom/esp32 -I/home/vlev/esp/esp-idf/components/esp_common/include -I/home/vlev/esp/esp-idf/components/esp_system/include -I/home/vlev/esp/esp-idf/components/esp_system/port/soc -I/home/vlev/esp/esp-idf/components/esp_system/port/include/private -I/home/vlev/esp/esp-idf/components/xtensa/esp32/include -I/home/vlev/esp/esp-idf/components/xtensa/include -I/home/vlev/esp/esp-idf/components/xtensa/deprecated_include -I/home/vlev/esp/esp-idf/components/lwip/include -I/home/vlev/esp/esp-idf/components/lwip/include/apps -I/home/vlev/esp/esp-idf/components/lwip/include/apps/sntp -I/home/vlev/esp/esp-idf/components/lwip/lwip/src/include -I/home/vlev/esp/esp-idf/components/lwip/port/include -I/home/vlev/esp/esp-idf/components/lwip/port/freertos/include -I/home/vlev/esp/esp-idf/components/lwip/port/esp32xx/include -I/home/vlev/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/vlev/esp/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/vlev/esp/esp-idf/components/esp_http_server/include -I/home/vlev/esp/esp-idf/components/http_parser -I/home/vlev/esp/esp-idf/components/esp_event/include -I/home/vlev/esp/esp-idf/components/esp_wifi/include -I/home/vlev/esp/esp-idf/components/esp_wifi/wifi_apps/include -I/home/vlev/esp/esp-idf/components/esp_phy/include -I/home/vlev/esp/esp-idf/components/esp_phy/esp32/include -I/home/vlev/esp/esp-idf/components/esp_netif/include -I/home/vlev/esp/esp-idf/components/esp_eth/include -I/home/vlev/esp/esp-idf/components/driver/include -I/home/vlev/esp/esp-idf/components/driver/deprecated -I/home/vlev/esp/esp-idf/components/driver/analog_comparator/include -I/home/vlev/esp/esp-idf/components/driver/dac/include -I/home/vlev/esp/esp-idf/components/driver/i2c/include -I/home/vlev/esp/esp-idf/components/driver/i2s/include -I/home/vlev/esp/esp-idf/components/driver/ledc/include -I/home/vlev/esp/esp-idf/components/driver/mcpwm/include -I/home/vlev/esp/esp-idf/components/driver/parlio/include -I/home/vlev/esp/esp-idf/components/driver/rmt/include -I/home/vlev/esp/esp-idf/components/driver/sdio_slave/include -I/home/vlev/esp/esp-idf/components/driver/sdmmc/include -I/home/vlev/esp/esp-idf/components/driver/sigma_delta/include -I/home/vlev/esp/esp-idf/components/driver/spi/include -I/home/vlev/esp/esp-idf/components/driver/temperature_sensor/include -I/home/vlev/esp/esp-idf/components/driver/touch_sensor/include -I/home/vlev/esp/esp-idf/components/driver/twai/include -I/home/vlev/esp/esp-idf/components/driver/uart/include -I/home/vlev/esp/esp-idf/components/driver/usb_serial_jtag/include -I/home/vlev/esp/esp-idf/components/driver/touch_sensor/esp32/include -I/home/vlev/esp/esp-idf/components/esp_pm/include -I/home/vlev/esp/esp-idf/components/esp_ringbuf/include -I/home/vlev/esp/esp-idf/components/esp_driver_gpio/include -I/home/vlev/esp/esp-idf/components/esp_driver_pcnt/include -I/home/vlev/esp/esp-idf/components/esp_driver_gptimer/include -I/home/vlev/esp/esp-idf/components/nvs_flash/include -I/home/vlev/esp/esp-idf/components/spi_flash/include -I/home/vlev/esp/esp-idf/components/esp_partition/include -mlongcalls -Wno-frame-address  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/home/vlev/Documents/Github/esp32-mbot/esp32=. -fmacro-prefix-map=/home/vlev/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/wifi.c.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/wifi.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/wifi.c.obj -c /home/vlev/Documents/Github/esp32-mbot/esp32/main/wifi.c
+In file included from /home/vlev/Documents/Github/esp32-mbot/esp32/main/wifi.c:23:
+/home/vlev/Documents/Github/esp32-mbot/esp32/main/wifi.h:42:5: error: conflicting types for 'esp_event_base_t'; have 'struct <anonymous>'
+   42 |     esp_event_base_t;
+      |     ^~~~~~~~~~~~~~~~
+In file included from /home/vlev/esp/esp-idf/components/esp_wifi/include/esp_private/esp_wifi_types_private.h:23,
+                 from /home/vlev/esp/esp-idf/components/esp_wifi/include/esp_wifi_types.h:11,
+                 from /home/vlev/esp/esp-idf/components/esp_wifi/include/esp_wifi.h:55,
+                 from /home/vlev/Documents/Github/esp32-mbot/esp32/main/wifi.c:6:
+/home/vlev/esp/esp-idf/components/esp_event/include/esp_event_base.h:20:22: note: previous declaration of 'esp_event_base_t' with type 'esp_event_base_t' {aka 'const char *'}
+   20 | typedef const char*  esp_event_base_t; /**< unique pointer to a subsystem that exposes events */
+      |                      ^~~~~~~~~~~~~~~~
+/home/vlev/Documents/Github/esp32-mbot/esp32/main/wifi.h:45:5: error: conflicting types for 'int32_t'; have 'unsigned int'
+   45 |     int32_t;
+      |     ^~~~~~~
+In file included from /home/vlev/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/stdint.h:14,
+                 from /home/vlev/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/stdint.h:9,
+                 from /home/vlev/esp/esp-idf/components/newlib/platform_include/assert.h:14,
+                 from /home/vlev/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/reent.h:458,
+                 from /home/vlev/esp/esp-idf/components/newlib/platform_include/sys/reent.h:22,
+                 from /home/vlev/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/string.h:11,
+                 from /home/vlev/Documents/Github/esp32-mbot/esp32/main/wifi.c:1:
+/home/vlev/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_stdint.h:44:19: note: previous declaration of 'int32_t' with type 'int32_t' {aka 'long int'}
+   44 | typedef __int32_t int32_t ;
+      |                   ^~~~~~~
+/home/vlev/Documents/Github/esp32-mbot/esp32/main/wifi.c: In function 'event_handler':
+/home/vlev/Documents/Github/esp32-mbot/esp32/main/wifi.c:30:20: warning: comparison between pointer and integer
+   30 |     if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START) {
+      |                    ^~
+/home/vlev/Documents/Github/esp32-mbot/esp32/main/wifi.c:32:27: warning: comparison between pointer and integer
+   32 |     } else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED) {
+      |                           ^~
+/home/vlev/Documents/Github/esp32-mbot/esp32/main/wifi.h:11:36: error: 'CONFIG_ESP_MAXIMUM_RETRY' undeclared (first use in this function); did you mean 'EXAMPLE_ESP_MAXIMUM_RETRY'?
+   11 | #define EXAMPLE_ESP_MAXIMUM_RETRY  CONFIG_ESP_MAXIMUM_RETRY
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/vlev/Documents/Github/esp32-mbot/esp32/main/wifi.c:33:27: note: in expansion of macro 'EXAMPLE_ESP_MAXIMUM_RETRY'
+   33 |         if (s_retry_num < EXAMPLE_ESP_MAXIMUM_RETRY) {
+      |                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/vlev/Documents/Github/esp32-mbot/esp32/main/wifi.h:11:36: note: each undeclared identifier is reported only once for each function it appears in
+   11 | #define EXAMPLE_ESP_MAXIMUM_RETRY  CONFIG_ESP_MAXIMUM_RETRY
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/vlev/Documents/Github/esp32-mbot/esp32/main/wifi.c:33:27: note: in expansion of macro 'EXAMPLE_ESP_MAXIMUM_RETRY'
+   33 |         if (s_retry_num < EXAMPLE_ESP_MAXIMUM_RETRY) {
+      |                           ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/vlev/Documents/Github/esp32-mbot/esp32/main/wifi.c:8:
+/home/vlev/Documents/Github/esp32-mbot/esp32/main/wifi.c:36:22: error: 'TAG' undeclared (first use in this function)
+   36 |             ESP_LOGI(TAG, "retry to connect to the AP");
+      |                      ^~~
+/home/vlev/esp/esp-idf/components/log/include/esp_log.h:436:81: note: in definition of macro 'ESP_LOG_LEVEL'
+  436 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                 ^~~
+/home/vlev/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/vlev/Documents/Github/esp32-mbot/esp32/main/wifi.c:36:13: note: in expansion of macro 'ESP_LOGI'
+   36 |             ESP_LOGI(TAG, "retry to connect to the AP");
+      |             ^~~~~~~~
+/home/vlev/Documents/Github/esp32-mbot/esp32/main/wifi.c:41:27: warning: comparison between pointer and integer
+   41 |     } else if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP) {
+      |                           ^~
+In file included from /home/vlev/esp/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h:12,
+                 from /home/vlev/esp/esp-idf/components/esp_hw_support/include/esp_cpu.h:20,
+                 from /home/vlev/esp/esp-idf/components/esp_hw_support/include/spinlock.h:11,
+                 from /home/vlev/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:49,
+                 from /home/vlev/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/portable.h:57,
+                 from /home/vlev/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:69,
+                 from /home/vlev/Documents/Github/esp32-mbot/esp32/main/wifi.c:2:
+/home/vlev/Documents/Github/esp32-mbot/esp32/main/wifi.c: In function 'wifi_init_sta':
+/home/vlev/Documents/Github/esp32-mbot/esp32/main/wifi.c:65:57: warning: passing argument 3 of 'esp_event_handler_instance_register' from incompatible pointer type [-Wincompatible-pointer-types]
+   65 |                                                         &event_handler,
+      |                                                         ^~~~~~~~~~~~~~
+      |                                                         |
+      |                                                         void (*)(void *, int,  int32_t,  void *) {aka void (*)(void *, int,  unsigned int,  void *)}
+/home/vlev/esp/esp-idf/components/esp_common/include/esp_err.h:118:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  118 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+In file included from /home/vlev/esp/esp-idf/components/esp_wifi/include/esp_wifi.h:56:
+/home/vlev/esp/esp-idf/components/esp_event/include/esp_event.h:243:66: note: expected 'esp_event_handler_t' {aka 'void (*)(void *, const char *, long int,  void *)'} but argument is of type 'void (*)(void *, int,  int32_t,  void *)' {aka 'void (*)(void *, int,  unsigned int,  void *)'}
+  243 |                                              esp_event_handler_t event_handler,
+      |                                              ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+/home/vlev/Documents/Github/esp32-mbot/esp32/main/wifi.c:70:57: warning: passing argument 3 of 'esp_event_handler_instance_register' from incompatible pointer type [-Wincompatible-pointer-types]
+   70 |                                                         &event_handler,
+      |                                                         ^~~~~~~~~~~~~~
+      |                                                         |
+      |                                                         void (*)(void *, int,  int32_t,  void *) {aka void (*)(void *, int,  unsigned int,  void *)}
+/home/vlev/esp/esp-idf/components/esp_common/include/esp_err.h:118:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  118 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/home/vlev/esp/esp-idf/components/esp_event/include/esp_event.h:243:66: note: expected 'esp_event_handler_t' {aka 'void (*)(void *, const char *, long int,  void *)'} but argument is of type 'void (*)(void *, int,  int32_t,  void *)' {aka 'void (*)(void *, int,  unsigned int,  void *)'}
+  243 |                                              esp_event_handler_t event_handler,
+      |                                              ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+/home/vlev/Documents/Github/esp32-mbot/esp32/main/wifi.h:9:36: error: 'CONFIG_ESP_WIFI_SSID' undeclared (first use in this function); did you mean 'CONFIG_EXAMPLE_WIFI_SSID'?
+    9 | #define EXAMPLE_ESP_WIFI_SSID      CONFIG_ESP_WIFI_SSID
+      |                                    ^~~~~~~~~~~~~~~~~~~~
+/home/vlev/Documents/Github/esp32-mbot/esp32/main/wifi.c:76:21: note: in expansion of macro 'EXAMPLE_ESP_WIFI_SSID'
+   76 |             .ssid = EXAMPLE_ESP_WIFI_SSID,
+      |                     ^~~~~~~~~~~~~~~~~~~~~
+/home/vlev/Documents/Github/esp32-mbot/esp32/main/wifi.h:10:36: error: 'CONFIG_ESP_WIFI_PASSWORD' undeclared (first use in this function); did you mean 'CONFIG_EXAMPLE_WIFI_PASSWORD'?
+   10 | #define EXAMPLE_ESP_WIFI_PASS      CONFIG_ESP_WIFI_PASSWORD
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/vlev/Documents/Github/esp32-mbot/esp32/main/wifi.c:77:25: note: in expansion of macro 'EXAMPLE_ESP_WIFI_PASS'
+   77 |             .password = EXAMPLE_ESP_WIFI_PASS,
+      |                         ^~~~~~~~~~~~~~~~~~~~~
+/home/vlev/Documents/Github/esp32-mbot/esp32/main/wifi.c:83:35: error: 'ESP_WIFI_SCAN_AUTH_MODE_THRESHOLD' undeclared (first use in this function)
+   83 |             .threshold.authmode = ESP_WIFI_SCAN_AUTH_MODE_THRESHOLD,
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/vlev/Documents/Github/esp32-mbot/esp32/main/wifi.c:84:28: error: 'ESP_WIFI_SAE_MODE' undeclared (first use in this function)
+   84 |             .sae_pwe_h2e = ESP_WIFI_SAE_MODE,
+      |                            ^~~~~~~~~~~~~~~~~
+/home/vlev/Documents/Github/esp32-mbot/esp32/main/wifi.c:85:35: error: 'EXAMPLE_H2E_IDENTIFIER' undeclared (first use in this function)
+   85 |             .sae_h2e_identifier = EXAMPLE_H2E_IDENTIFIER,
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~
+/home/vlev/Documents/Github/esp32-mbot/esp32/main/wifi.c:92:14: error: 'TAG' undeclared (first use in this function)
+   92 |     ESP_LOGI(TAG, "wifi_init_sta finished.");
+      |              ^~~
+/home/vlev/esp/esp-idf/components/log/include/esp_log.h:436:81: note: in definition of macro 'ESP_LOG_LEVEL'
+  436 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                 ^~~
+/home/vlev/esp/esp-idf/components/log/include/esp_log.h:368:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  368 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/vlev/Documents/Github/esp32-mbot/esp32/main/wifi.c:92:5: note: in expansion of macro 'ESP_LOGI'
+   92 |     ESP_LOGI(TAG, "wifi_init_sta finished.");
+      |     ^~~~~~~~
+ninja: build stopped: subcommand failed.
