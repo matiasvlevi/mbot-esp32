@@ -1,19 +1,34 @@
 # mbot-esp32
 
-This software is a ESP32 Websocket Instruction Interpreter.
+This repository contains:
 
-It listens for incoming Websockets, and performs actions based on the recieved instructions.
+* An esp32 webserver firmware. 
+ Provides an API of commands called through websockets, allowing a web client to control the device.
 
-An [Oxenode](https://oxenode.io/) plugin is available in `./oxenode/esp32-car` as a CDN resource. The plugin gives bindings for sending instructions through websockets. 
+* An [Oxenode](https://oxenode.io/) plugin (`./oxenode/mbot-esp32`). Provides bindings for sending instructions through websockets. Acts as a web client to the esp32 firmware.
+
+<br/>
 
 ## Robot & Hardware
 
+This firmware is meant to be used with an `esp32` devkit, wired to a `l298` motor controller.
+
+
 ![oxebot_angle](./assets/oxebot_angle.jpg)
 
-This software is meant to be used with an `esp32` devkit, wired to a `l298` motor controller.
+## Oxenode Client Script
 
+### Websocket creation
 
-## Build
+![mbot-begin](./assets/script-begin.png)
+
+### Keyboard event (WASD controls)
+
+![mbot-key](./assets/script-key.png)
+
+<br/>
+
+## ESP32 Build Firmware
 
 We are using the official esp-idf sdk, once installed, you can run the alias to get everything setup.
 
