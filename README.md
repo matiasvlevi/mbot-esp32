@@ -37,6 +37,8 @@ Use this static CDN to include the plugin in [Oxenode](https://oxenode.io/)
 https://cdn.jsdelivr.net/gh/matiasvlevi/mbot-esp32@latest/oxenode/mbot-esp32
 ```
 
+> NOTE: The firmware does not support encryptes websockets (wss) yet, which makes it impossible to use it from a https client.
+
 <br/>
 
 ## Build & Upload Firmware
@@ -47,11 +49,19 @@ We are using the official esp-idf sdk, once installed, you can run the alias to 
 get_idf
 ```
 
+#### Wifi Config
+
+Edit `./main/wifi_cred.h` to match your wifi credentials.
+
 You can then use make to build and upload to the esp32
+
+####  Build
 
 ```
 make build
 ```
+
+####  Upload
 
 ```
 make upload
