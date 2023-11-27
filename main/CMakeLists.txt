@@ -1,4 +1,4 @@
-idf_component_register(SRCS "command.c" "wifi.c" "main.c" "motor.c"
+idf_component_register(SRCS "example_motor.c" "command.c" "wifi.c" "main.c" "motor.c"
                     INCLUDE_DIRS "."
                     REQUIRES esp_http_server
                     REQUIRES esp_wifi

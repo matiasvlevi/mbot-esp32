@@ -10,15 +10,9 @@ typedef enum mbot_commad {
     MOTOR_CONTROL = 0xC0
 } mbot_commad_t;
 
-typedef enum mbot_motor_arg {
-    NOP_MOTOR = 0x00,
-    FORWARD   = 0x01,
-    LEFT      = 0x02,
-    RIGHT     = 0x03,
-    BRAKE     = 0x04
-} mbot_motor_arg_t;
-
 typedef unsigned char mbot_command_arg_t;
+
+void handle_motor_command(mbot_command_arg_t *args);
 
 void mbot_handle_command(mbot_commad_t action, mbot_command_arg_t *args);
 

@@ -18,8 +18,6 @@
 #include "esp_eth.h"
 #include <esp_http_server.h>
 
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
 
 
 #include "command.h"
@@ -145,7 +143,6 @@ static esp_err_t homepage_handler(httpd_req_t *req) {
   return httpd_resp_send(req, resp, HTTPD_RESP_USE_STRLEN);
 }
 
-
 static const httpd_uri_t ws = {.uri = "/ws",
                                .method = HTTP_GET,
                                .handler = echo_handler,
@@ -223,55 +220,12 @@ void app_websockets(void)
   server = start_webserver();
 }
 
-static void example_motor() {
-
-  mbot_motor_drive(0, 0);
-
-  vTaskDelay(2000 / portTICK_PERIOD_MS);
- 
-  for (int i = 0; i < 2; i++) {
-    mbot_motor_drive(100, 100);
-
-    vTaskDelay(1000 / portTICK_PERIOD_MS);
-
-    if (i % 2) mbot_motor_drive(0, 100);
-    else mbot_motor_drive(100, 0);
-
-    vTaskDelay(650 / portTICK_PERIOD_MS);
-
-    mbot_motor_drive(45, 45);
-
-    vTaskDelay(650 / portTICK_PERIOD_MS);
-  }
-
-
-  mbot_motor_drive(100, 100);
-
-  vTaskDelay(800 / portTICK_PERIOD_MS);
-
-  mbot_motor_drive(0, 100);
-
-  vTaskDelay(3500 / portTICK_PERIOD_MS);
-
-
-
-
-  mbot_motor_drive(0, 0);
-  mbot_motor_stop();
-
-  while (true) {
-    vTaskDelay(1);
-  }
-
-
-}
-
 void app_main(void) 
 {
   ESP_ERROR_CHECK(nvs_flash_init());
   ESP_ERROR_CHECK(esp_netif_init());
 
-
   mbot_motor_init();
+
   app_websockets();
 }
