@@ -28,7 +28,18 @@ This firmware is meant to be used with an `esp32` devkit, wired to a `l298` moto
 
 <br/>
 
-## ESP32 Build Firmware
+
+## Oxenode Plugin CDN
+
+Use this static CDN to include the plugin in [Oxenode](https://oxenode.io/)
+
+```
+https://cdn.jsdelivr.net/gh/matiasvlevi/mbot-esp32@latest/oxenode/mbot-esp32
+```
+
+<br/>
+
+## Build & Upload Firmware
 
 We are using the official esp-idf sdk, once installed, you can run the alias to get everything setup.
 
@@ -44,10 +55,4 @@ make build
 
 ```
 make upload
-```
-
-## Oxenode Plugin CDN
-
-```
-cdn
 ```
