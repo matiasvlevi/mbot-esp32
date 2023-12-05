@@ -3,34 +3,39 @@
 #include <stdbool.h>
 
 /**
- * Configure
+ *
+ *  l298 Motor Driver
+ *
  */
-
 /**
  * MCPWM GPIO pins
- */ 
-#define MOTOR_LEFT_PWM 18
-#define MOTOR_RIGHT_PWM 26
+ */
+#define MOTOR_LEFT_PWM 7
+#define MOTOR_RIGHT_PWM 8
 
 /**
  * Init MCPWM signals on static pin numbers
- */ 
-void mbot_motot_init_mcpwm(void);
+ */
+void mbot_motor_init_mcpwm(void);
 
 /**
  * Direction GPIO pins
- */ 
-#define MOTOR_LEFT_DDR 19
-#define MOTOR_RIGHT_DDR 27
+ */
+
+#define MOTOR_LEFT_DDR_A 16
+#define MOTOR_LEFT_DDR_B 15
+
+#define MOTOR_RIGHT_DDR_A 18
+#define MOTOR_RIGHT_DDR_B 17
 
 /**
  * Init Direction signals on static pin numbers
- */ 
+ */
 void mbot_motor_init_dir(void);
 
 /**
  * Init PWM & Direction signals on static pin numbers
- */ 
+ */
 void mbot_motor_init(void);
 
 /**
@@ -44,17 +49,17 @@ void mbot_motor_init(void);
  * @param left  - Left motor speed,  ranges from 0.0 to 100.0
  * @param right - Right motor speed, ranges from 0.0 to 100.0
  *
- */ 
+ */
 void mbot_motor_set_duty(float left, float right);
 
 /**
  * Set the direction of the right motor
- */ 
+ */
 void mbot_motor_set_dir_right(bool right);
 
 /**
  * Set the direction of the left motor
- */ 
+ */
 void mbot_motor_set_dir_left(bool left);
 
 /**
@@ -62,7 +67,7 @@ void mbot_motor_set_dir_left(bool left);
  *
  * @param left  - Left motor direction
  * @param Right - Right motor direction
- */ 
+ */
 void mbot_motor_set_dir(bool left, bool right);
 
 /**

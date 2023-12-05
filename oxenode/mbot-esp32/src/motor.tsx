@@ -38,28 +38,34 @@ export async function Trigger({ node, controller, inputs: { socket }, state: { m
     let motor_right, motor_left;
     switch(mode) {
         case '1':{
-            motor_right = speed;
-            motor_left = speed;
+            motor_right = new Uint8Array([ speed ]);
+            motor_left = new Uint8Array([ speed ]);
+            break;
         }
         case '2':{
-            motor_right = speed | (1 << 7);
-            motor_left = speed;
+            motor_right = new Uint8Array([ -speed ]);
+            motor_left = new Uint8Array([ speed ]);
+            break;
         }
         case '3':{
-            motor_right = speed;
-            motor_left = speed | (1 << 7);
+            motor_right = new Uint8Array([ speed ]);
+            motor_left = new Uint8Array([ -speed ]);
+            break;
         }
         case '4':{
-            motor_right = 0;
-            motor_left = 0;
+            motor_right = new Uint8Array([ 0 ]);
+            motor_left = new Uint8Array([ 0 ]);
+            break;
         }
     }
 
     const commandBuffer = new Uint8Array([
         0xC0,        // Motor Control
-        motor_right,
-        motor_left
+        ...motor_right,
+        ...motor_left
     ]);
+
+    console.log(commandBuffer);
     
     if (socket) socket.send(commandBuffer);
     else {
